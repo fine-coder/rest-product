@@ -13,3 +13,7 @@ http://site3.anipic.org/test
 Можно менять, тогда будет ошибка доступа  
 Результат нужно смотреть в консоле
 
+Запросы REST делал программой Insomnia, несколько скринов  
+http://site3.anipic.org/rest1.png  
+http://site3.anipic.org/rest2.png
+
