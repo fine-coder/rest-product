@@ -1,0 +1,72 @@
+<?php
+
+namespace common\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "category".
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $url
+ * @property int $sort
+ *
+ * @property Product[] $products
+ * @property Property[] $properties
+ */
+class Category extends \yii\db\ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'category';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['sort'], 'integer'],
+            [['name', 'url'], 'string', 'max' => 100],
+            [['url'], 'unique'],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'Название',
+            'url' => 'Url',
+            'sort' => 'Сортировка',
+        ];
+    }
+
+    /**
+     * Gets query for [[Products]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProducts()
+    {
+        return $this->hasMany(Product::className(), ['category_id' => 'id']);
+    }
+
+    /**
+     * Gets query for [[Properties]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProperties()
+    {
+        return $this->hasMany(Property::className(), ['category_id' => 'id']);
+    }
+}
