@@ -30,4 +30,5 @@ http://site3.anipic.org/rest2.png
 
 http://site3.anipic.org/rest/product  
 http://site3.anipic.org/rest/product-property?expand=product,property,propertyValue&_format=json  
-http://site3.anipic.org/rest/property?expand=category
+http://site3.anipic.org/rest/property?expand=category  
+http://site3.anipic.org/rest/property-value
