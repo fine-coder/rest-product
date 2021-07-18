@@ -28,6 +28,7 @@ http://site3.anipic.org/rest2.png
 В админке сделал сортировку и фильтрацию по связанным данным, поэтому код админки тоже добавил в репозиторий  
 В админке все сделано по-простому
 
+http://site3.anipic.org/rest/category  
 http://site3.anipic.org/rest/product  
 http://site3.anipic.org/rest/product-property?expand=product,property,propertyValue&_format=json  
 http://site3.anipic.org/rest/property?expand=category  
